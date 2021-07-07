@@ -32,7 +32,6 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
     }
   }
 });
-
 document.querySelector('.btn--hold').addEventListener('click', function () {
   if (status) {
     total[startingPlayer] = total[startingPlayer] + playerScore;
@@ -41,7 +40,7 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
     playerScore = 0;
     document.querySelector(`#current--${startingPlayer}`).textContent = 0;
     if (total[startingPlayer] >= 100) {
-      status = false;
+      // status = false;
       document
         .querySelector(`.player--${startingPlayer}`)
         .classList.add('player--winner');
